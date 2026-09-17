@@ -25,9 +25,16 @@ prayed, and it never traps you on your own phone.
 - iOS 17+, iPhone only. Turkish and English.
 
 <p align="center">
-  <img src="Docs/screenshots/home-light.png" width="31%" alt="Home screen, light">
-  <img src="Docs/screenshots/home-dark.png" width="31%" alt="Home screen, dark">
-  <img src="Docs/screenshots/settings-light.png" width="31%" alt="Settings">
+  <img src="Docs/screenshots/home-light.png" width="23%" alt="Home screen, light">
+  <img src="Docs/screenshots/home-dark.png" width="23%" alt="Home screen, dark">
+  <img src="Docs/screenshots/shield-dark.png" width="23%" alt="The screen shown in place of a blocked app">
+  <img src="Docs/screenshots/settings-light.png" width="23%" alt="Settings">
+</p>
+
+<p align="center">
+  <sub>Third image is a render of the shield. It cannot be captured in the
+  Simulator — Screen Time APIs do not run there — and it is drawn from the same
+  values, symbol and layout the extension produces on device.</sub>
 </p>
 
 ---
