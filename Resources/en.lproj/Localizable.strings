@@ -1,0 +1,164 @@
+/* Salah First — English
+   To add a language: create Resources/<code>.lproj/Localizable.strings, copy
+   this file, translate the values, and add the code to CFBundleLocalizations
+   in project.yml. No Swift changes are needed. */
+
+/* MARK: - Prayers */
+"prayer.fajr" = "Fajr";
+"prayer.fajr.full" = "Fajr Prayer";
+"prayer.dhuhr" = "Dhuhr";
+"prayer.dhuhr.full" = "Dhuhr Prayer";
+"prayer.asr" = "Asr";
+"prayer.asr.full" = "Asr Prayer";
+"prayer.maghrib" = "Maghrib";
+"prayer.maghrib.full" = "Maghrib Prayer";
+"prayer.isha" = "Isha";
+"prayer.isha.full" = "Isha Prayer";
+
+/* MARK: - Common */
+"app.name" = "Salah First";
+"app.tagline" = "Pray first. Scroll later.";
+"common.continue" = "Continue";
+"common.done" = "Done";
+"common.cancel" = "Cancel";
+"common.back" = "Back";
+"common.skip" = "Skip for now";
+"common.notNow" = "Not now";
+"common.enable" = "Turn on";
+"common.minutesShort" = "%d min";
+
+/* MARK: - Onboarding */
+"onboarding.welcome.title" = "Pray first.\nScroll later.";
+"onboarding.welcome.body" = "Take a short break from the apps that pull you in when it is time to pray. Salah First locks the apps you choose for the length of the prayer, and unlocks them when you say you are done.";
+"onboarding.welcome.action" = "Get started";
+
+"onboarding.location.title" = "Prayer times";
+"onboarding.location.body" = "Times are calculated on your device. Your location never leaves your phone and is never sent to a server.";
+"onboarding.location.use" = "Use my location";
+"onboarding.location.manual" = "Choose a city instead";
+
+"onboarding.screentime.title" = "Screen Time permission";
+"onboarding.screentime.body" = "Locking apps needs Apple's Screen Time permission. It only lets us restrict the apps you pick — we cannot see which apps you use.";
+"onboarding.screentime.action" = "Grant permission";
+"onboarding.screentime.denied" = "Permission was not granted. You can turn it on any time in Settings.";
+
+"onboarding.apps.title" = "Which apps?";
+"onboarding.apps.body" = "Pick the apps you want a break from at prayer time. Apple's own picker shows the list — we cannot see what is on your phone.";
+"onboarding.apps.choose" = "Choose apps";
+"onboarding.apps.count" = "%d selected";
+"onboarding.apps.none" = "Nothing selected yet";
+
+"onboarding.prayers.title" = "Which prayers?";
+"onboarding.prayers.body" = "You can change these later.";
+
+"onboarding.notifications.title" = "Let us tell you when it is time?";
+"onboarding.notifications.body" = "One quiet notification when a prayer time begins. Nothing else, ever.";
+"onboarding.notifications.action" = "Allow notifications";
+
+"onboarding.done.title" = "You are set";
+"onboarding.done.body" = "At the next prayer time, the apps you chose will lock for a short while.";
+"onboarding.done.action" = "Finish";
+
+/* MARK: - Home */
+"home.today" = "Today";
+"home.next" = "Next";
+"home.progress" = "%1$d / %2$d";
+"home.week" = "This week";
+"home.weekProgress" = "%1$d / %2$d";
+"home.week.caption" = "prayers completed · last 7 days";
+"home.week.accessibility" = "You completed %1$d of the %2$d prayer times in the last 7 days.";
+"home.blocking.on" = "Blocking on";
+"home.blocking.off" = "Blocking off";
+"home.blocking.turnOn" = "Turn on";
+"home.setup.needed" = "Finish setup";
+"home.status.completed" = "done";
+"home.status.upcoming" = "upcoming";
+"home.status.skipped" = "skipped";
+"home.countdown.hoursMinutes" = "%1$dh %2$dm";
+"home.countdown.minutes" = "%d min";
+"home.countdown.soon" = "any moment";
+
+/* MARK: - Prayer window */
+"window.heading" = "Right now";
+"window.waiting" = "%@ will still be here.";
+"window.waiting.generic" = "Your apps will still be here.";
+"window.instruction" = "Take your prayer first.";
+"window.completed.action" = "I have prayed";
+"window.remaining" = "Unlocks on its own in %@";
+"window.skip.action" = "Skip this one";
+"window.skip.title" = "Skip this prayer window?";
+"window.skip.body" = "Your apps unlock right away. You can do this whenever you need to — nothing is lost.";
+"window.skip.confirm" = "Skip";
+
+/* MARK: - Settings */
+"settings.title" = "Settings";
+"settings.section.blocking" = "Blocking";
+"settings.blocking.enabled" = "Block at prayer time";
+"settings.blocking.footer" = "Turning this off lifts every lock immediately.";
+"settings.apps" = "Blocked apps";
+"settings.prayers" = "Active prayers";
+"settings.window" = "Window length";
+"settings.window.footer" = "How long apps stay locked after a prayer time begins. Apple requires at least 15 minutes.";
+
+"settings.section.times" = "Prayer times";
+"settings.location" = "Location";
+"settings.location.automatic" = "Automatic";
+"settings.location.manual" = "Chosen manually";
+"settings.location.none" = "Not set";
+"settings.method" = "Calculation method";
+"settings.madhab" = "Asr time";
+"settings.madhab.shafi" = "Earlier";
+"settings.madhab.hanafi" = "Later";
+"settings.madhab.footer" = "When Asr begins depends on how shadow length is measured. The earlier time comes from the Shafi, Maliki, Hanbali and Jafari calculation, the later one from the Hanafi calculation. Diyanet publishes the earlier time.";
+
+"settings.section.notifications" = "Notifications";
+"settings.notifications.enabled" = "Prayer time notification";
+
+"settings.section.about" = "About";
+"settings.privacy" = "Privacy";
+"settings.version" = "Version";
+"settings.sourceCode" = "Source code";
+
+"settings.section.danger" = "Reset";
+"settings.reset" = "Delete all data";
+"settings.reset.footer" = "Your selections and prayer history are removed from this device. This cannot be undone.";
+"settings.reset.confirm" = "Delete";
+
+/* MARK: - Shield (shown in place of a blocked app) */
+"shield.title.generic" = "Prayer time";
+"shield.subtitle.named" = "%@ will still be here. Take your prayer first.";
+"shield.subtitle.generic" = "Your app will still be here. Take your prayer first.";
+"shield.button.close" = "Close";
+"shield.button.completed" = "I have prayed";
+
+/* MARK: - Notifications */
+"notification.prayer.title" = "%@ has begun";
+"notification.prayer.body" = "Pray first. Scroll later.";
+
+/* MARK: - States and errors */
+"status.screentime.notDetermined" = "Screen Time permission needed";
+"status.screentime.denied.title" = "Screen Time permission is off";
+"status.screentime.denied.body" = "App blocking cannot work without it. You can turn it on in Settings › Screen Time.";
+"status.screentime.retry" = "Try again";
+"status.location.denied.title" = "Location permission is off";
+"status.location.denied.body" = "To calculate prayer times, either allow location or choose your city manually.";
+"status.noSelection.title" = "No apps chosen yet";
+"status.noSelection.body" = "Pick the apps you want a break from at prayer time.";
+"status.simulator.title" = "Blocking does not run in the Simulator";
+"status.simulator.body" = "Screen Time APIs only work on a real device. The rest of the app behaves normally.";
+
+/* MARK: - City picker */
+"city.search" = "Search for a city";
+"city.title" = "Choose a city";
+
+/* MARK: - Privacy */
+"privacy.intro" = "Salah First collects nothing. These are not marketing claims — each line describes something the code does, or rather does not do.";
+"privacy.point.noAccount" = "No account. We never ask for an email address, a phone number, or a sign-in.";
+"privacy.point.noServer" = "No server. The app makes no network requests at all, and works in airplane mode.";
+"privacy.point.location" = "Your location is used only to calculate prayer times, only on this device. It is never sent anywhere.";
+"privacy.point.apps" = "We cannot see which apps you chose. Apple's own picker makes the selection and hands us nothing but opaque tokens.";
+"privacy.point.history" = "Your prayer history stays on this device and is kept for at most 120 days.";
+"privacy.point.noMoney" = "No ads, no subscription, no in-app purchases, no donations, no trackers.";
+"privacy.point.delete" = "\"Delete all data\" in Settings removes everything, immediately.";
+"status.times.unavailable.title" = "Prayer times cannot be calculated here";
+"status.times.unavailable.body" = "At this latitude the sun does not set at this time of year, so the times cannot be derived astronomically. You can choose a city further south in Settings.";

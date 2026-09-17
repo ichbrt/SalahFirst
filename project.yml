@@ -1,0 +1,142 @@
+name: SalahFirst
+
+# Signing settings live in Local.yml so that nobody's Team ID ends up in the
+# repository. See that file for setup.
+include:
+  - Local.yml
+
+options:
+  bundleIdPrefix: com.salahfirst
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  groupSortPosition: top
+  generateEmptyDirectories: false
+
+# ---------------------------------------------------------------------------
+# Change these two values to your own identifiers before shipping.
+# APP_GROUP_ID is substituted into the .entitlements and Info.plist files, so
+# it only needs to be edited here.
+# ---------------------------------------------------------------------------
+settings:
+  base:
+    APP_BUNDLE_ID: com.salahfirst.app
+    APP_GROUP_ID: group.com.salahfirst.app
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.0"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    TARGETED_DEVICE_FAMILY: "1"
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    GCC_WARN_ABOUT_MISSING_NEWLINE: YES
+    CLANG_WARN_DOCUMENTATION_COMMENTS: YES
+    SWIFT_TREAT_WARNINGS_AS_ERRORS: NO
+  configs:
+    Debug:
+      SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+      ONLY_ACTIVE_ARCH: YES
+    Release:
+      SWIFT_COMPILATION_MODE: wholemodule
+      VALIDATE_PRODUCT: YES
+
+packages:
+  Adhan:
+    url: https://github.com/batoulapps/adhan-swift
+    exactVersion: 1.5.0
+
+# ---------------------------------------------------------------------------
+targets:
+
+  SalahFirst:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: Resources
+        excludes: ["**/.DS_Store"]
+      - path: Support/App/PrivacyInfo.xcprivacy
+        buildPhase: resources
+    dependencies:
+      - package: Adhan
+      - target: SalahFirstMonitor
+      - target: SalahFirstShieldConfiguration
+      - target: SalahFirstShieldAction
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID)
+        # The bundle is SalahFirst.app; the name on the Home screen comes from
+        # CFBundleDisplayName, which is localized per language.
+        PRODUCT_NAME: SalahFirst
+        INFOPLIST_FILE: Support/App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Support/App/SalahFirst.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        DEVELOPMENT_ASSET_PATHS: ""
+        ENABLE_PREVIEWS: YES
+    scheme:
+      testTargets:
+        - SalahFirstTests
+      gatherCoverageData: true
+
+  # Applies / removes the shield when a prayer window starts and ends.
+  # Runs with a tight (~6 MB) memory budget, so it links no UI frameworks and
+  # never computes prayer times itself - it only reads a precomputed cache.
+  SalahFirstMonitor:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/Shared
+      - path: Extensions/DeviceActivityMonitor
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID).Monitor
+        PRODUCT_NAME: SalahFirstMonitor
+        INFOPLIST_FILE: Extensions/DeviceActivityMonitor/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Support/Extensions/Monitor.entitlements
+
+  # Draws the screen the user sees instead of the blocked app.
+  SalahFirstShieldConfiguration:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/Shared
+      - path: Sources/SharedUI
+      - path: Extensions/ShieldConfiguration
+      - path: Resources/tr.lproj
+        buildPhase: resources
+      - path: Resources/en.lproj
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID).ShieldConfiguration
+        PRODUCT_NAME: SalahFirstShieldConfiguration
+        INFOPLIST_FILE: Extensions/ShieldConfiguration/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Support/Extensions/ShieldConfiguration.entitlements
+
+  # Handles taps on the shield's buttons.
+  SalahFirstShieldAction:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Sources/Shared
+      - path: Extensions/ShieldAction
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID).ShieldAction
+        PRODUCT_NAME: SalahFirstShieldAction
+        INFOPLIST_FILE: Extensions/ShieldAction/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Support/Extensions/ShieldAction.entitlements
+
+  SalahFirstTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests/SalahFirstTests
+    dependencies:
+      - target: SalahFirst
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: $(APP_BUNDLE_ID).Tests
+        GENERATE_INFOPLIST_FILE: YES

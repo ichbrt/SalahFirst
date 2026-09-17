@@ -1,0 +1,164 @@
+/* Salah First — Türkçe
+   Yeni bir dil eklemek için: Resources/<kod>.lproj/Localizable.strings oluştur,
+   bu dosyayı kopyala, değerleri çevir ve kodu project.yml'deki
+   CFBundleLocalizations listesine ekle. Kod tarafında değişiklik gerekmez. */
+
+/* MARK: - Vakitler */
+"prayer.fajr" = "Sabah";
+"prayer.fajr.full" = "Sabah Namazı";
+"prayer.dhuhr" = "Öğle";
+"prayer.dhuhr.full" = "Öğle Namazı";
+"prayer.asr" = "İkindi";
+"prayer.asr.full" = "İkindi Namazı";
+"prayer.maghrib" = "Akşam";
+"prayer.maghrib.full" = "Akşam Namazı";
+"prayer.isha" = "Yatsı";
+"prayer.isha.full" = "Yatsı Namazı";
+
+/* MARK: - Genel */
+"app.name" = "Salah First";
+"app.tagline" = "Önce namaz. Sonra scroll.";
+"common.continue" = "Devam";
+"common.done" = "Tamam";
+"common.cancel" = "Vazgeç";
+"common.back" = "Geri";
+"common.skip" = "Şimdilik geç";
+"common.notNow" = "Şimdi değil";
+"common.enable" = "Aç";
+"common.minutesShort" = "%d dk";
+
+/* MARK: - Onboarding */
+"onboarding.welcome.title" = "Önce namaz.\nSonra scroll.";
+"onboarding.welcome.body" = "Namaz vakti geldiğinde seni oyalayan uygulamalara kısa bir ara ver. Salah First seçtiğin uygulamaları vakit boyunca kilitler, namazını tamamladığını söylediğinde açar.";
+"onboarding.welcome.action" = "Başla";
+
+"onboarding.location.title" = "Namaz vakitleri";
+"onboarding.location.body" = "Vakitler cihazında hesaplanır. Konumun telefonundan hiç çıkmaz, hiçbir sunucuya gönderilmez.";
+"onboarding.location.use" = "Konumumu kullan";
+"onboarding.location.manual" = "Şehri kendim seçeyim";
+
+"onboarding.screentime.title" = "Ekran Süresi izni";
+"onboarding.screentime.body" = "Uygulamaları kilitleyebilmek için Apple'ın Ekran Süresi iznine ihtiyaç var. Bu izin yalnızca senin seçtiğin uygulamaları kısıtlamamızı sağlar — hangi uygulamaları kullandığını göremeyiz.";
+"onboarding.screentime.action" = "İzin ver";
+"onboarding.screentime.denied" = "İzin verilmedi. Ayarlar'dan istediğin zaman açabilirsin.";
+
+"onboarding.apps.title" = "Hangi uygulamalar?";
+"onboarding.apps.body" = "Namaz vaktinde ara vermek istediğin uygulamaları seç. Listeyi Apple'ın kendi seçicisi gösterir; biz telefonundaki uygulamaları göremeyiz.";
+"onboarding.apps.choose" = "Uygulamaları seç";
+"onboarding.apps.count" = "%d öğe seçildi";
+"onboarding.apps.none" = "Henüz seçim yok";
+
+"onboarding.prayers.title" = "Hangi vakitler?";
+"onboarding.prayers.body" = "İstediğin vakitleri sonradan değiştirebilirsin.";
+
+"onboarding.notifications.title" = "Vakit girince haber verelim mi?";
+"onboarding.notifications.body" = "Yalnızca namaz vakti girdiğinde sessiz bir bildirim. Başka hiçbir şey göndermiyoruz.";
+"onboarding.notifications.action" = "Bildirimlere izin ver";
+
+"onboarding.done.title" = "Hazırsın";
+"onboarding.done.body" = "Bir sonraki vakit girdiğinde seçtiğin uygulamalar kısa bir süre kilitlenecek.";
+"onboarding.done.action" = "Bitir";
+
+/* MARK: - Ana ekran */
+"home.today" = "Bugün";
+"home.next" = "Sonraki";
+"home.progress" = "%1$d / %2$d";
+"home.week" = "Bu hafta";
+"home.weekProgress" = "%1$d / %2$d";
+"home.week.caption" = "tamamlanan vakit · son 7 gün";
+"home.week.accessibility" = "Son 7 günde giren %2$d vaktin %1$d tanesini tamamladın.";
+"home.blocking.on" = "Engelleme açık";
+"home.blocking.off" = "Engelleme kapalı";
+"home.blocking.turnOn" = "Aç";
+"home.setup.needed" = "Kuruluma devam et";
+"home.status.completed" = "tamamlandı";
+"home.status.upcoming" = "bekliyor";
+"home.status.skipped" = "geçildi";
+"home.countdown.hoursMinutes" = "%1$d saat %2$d dakika";
+"home.countdown.minutes" = "%d dakika";
+"home.countdown.soon" = "birazdan";
+
+/* MARK: - Namaz penceresi */
+"window.heading" = "Şu an";
+"window.waiting" = "%@ seni bekler.";
+"window.waiting.generic" = "Uygulamaların seni bekler.";
+"window.instruction" = "Önce namazını tamamla.";
+"window.completed.action" = "Namazımı tamamladım";
+"window.remaining" = "%@ sonra kendiliğinden açılır";
+"window.skip.action" = "Bu sefer geç";
+"window.skip.title" = "Bu vakti geçmek istiyor musun?";
+"window.skip.body" = "Uygulamalar hemen açılır. Bunu istediğin zaman yapabilirsin — hiçbir şey kaybetmezsin.";
+"window.skip.confirm" = "Geç";
+
+/* MARK: - Ayarlar */
+"settings.title" = "Ayarlar";
+"settings.section.blocking" = "Engelleme";
+"settings.blocking.enabled" = "Namaz vaktinde engelle";
+"settings.blocking.footer" = "Kapattığında tüm kilitler anında kalkar.";
+"settings.apps" = "Engellenecek uygulamalar";
+"settings.prayers" = "Aktif vakitler";
+"settings.window" = "Pencere süresi";
+"settings.window.footer" = "Namaz vakti girdikten sonra uygulamaların kilitli kalacağı süre. Apple en az 15 dakika gerektiriyor.";
+
+"settings.section.times" = "Namaz vakitleri";
+"settings.location" = "Konum";
+"settings.location.automatic" = "Otomatik";
+"settings.location.manual" = "Elle seçildi";
+"settings.location.none" = "Ayarlanmadı";
+"settings.method" = "Hesaplama yöntemi";
+"settings.madhab" = "İkindi vakti";
+"settings.madhab.shafi" = "Erken";
+"settings.madhab.hanafi" = "Geç";
+"settings.madhab.footer" = "İkindinin ne zaman girdiği, gölge boyunun nasıl ölçüldüğüne göre değişir. Erken vakti Şafii, Maliki, Hanbelî ve Caferî hesabı verir; geç vakti Hanefî hesabı. Diyanet erken vakti yayımlar.";
+
+"settings.section.notifications" = "Bildirimler";
+"settings.notifications.enabled" = "Vakit bildirimi";
+
+"settings.section.about" = "Hakkında";
+"settings.privacy" = "Gizlilik";
+"settings.version" = "Sürüm";
+"settings.sourceCode" = "Kaynak kodu";
+
+"settings.section.danger" = "Sıfırla";
+"settings.reset" = "Tüm verileri sil";
+"settings.reset.footer" = "Seçimlerin ve namaz geçmişin bu cihazdan silinir. Geri alınamaz.";
+"settings.reset.confirm" = "Sil";
+
+/* MARK: - Kalkan (engellenen uygulama ekranı) */
+"shield.title.generic" = "Namaz vakti";
+"shield.subtitle.named" = "%@ seni bekler. Önce namazını tamamla.";
+"shield.subtitle.generic" = "Uygulaman seni bekler. Önce namazını tamamla.";
+"shield.button.close" = "Kapat";
+"shield.button.completed" = "Tamamladım";
+
+/* MARK: - Bildirimler */
+"notification.prayer.title" = "%@ vakti";
+"notification.prayer.body" = "Önce namaz, sonra scroll.";
+
+/* MARK: - Durumlar ve hatalar */
+"status.screentime.notDetermined" = "Ekran Süresi izni gerekli";
+"status.screentime.denied.title" = "Ekran Süresi izni kapalı";
+"status.screentime.denied.body" = "Uygulama engelleme bu izin olmadan çalışamaz. Ayarlar › Ekran Süresi bölümünden açabilirsin.";
+"status.screentime.retry" = "Tekrar dene";
+"status.location.denied.title" = "Konum izni kapalı";
+"status.location.denied.body" = "Vakitleri hesaplayabilmek için ya konum iznini aç ya da şehrini elle seç.";
+"status.noSelection.title" = "Henüz uygulama seçmedin";
+"status.noSelection.body" = "Namaz vaktinde ara vermek istediğin uygulamaları seç.";
+"status.simulator.title" = "Simülatörde engelleme çalışmaz";
+"status.simulator.body" = "Ekran Süresi API'leri yalnızca gerçek cihazda çalışır. Arayüzün geri kalanı normal kullanılabilir.";
+
+/* MARK: - Şehir seçimi */
+"city.search" = "Şehir ara";
+"city.title" = "Şehir seç";
+
+/* MARK: - Gizlilik */
+"privacy.intro" = "Salah First hiçbir veri toplamaz. Aşağıdakiler pazarlama sözü değil, uygulamanın kodunda karşılığı olan maddelerdir.";
+"privacy.point.noAccount" = "Hesap yok. E-posta, telefon numarası veya giriş istemiyoruz.";
+"privacy.point.noServer" = "Sunucu yok. Uygulama hiçbir yere ağ isteği göndermez; uçak modunda da çalışır.";
+"privacy.point.location" = "Konumun yalnızca namaz vakitlerini hesaplamak için, yalnızca cihazında kullanılır. Hiçbir yere gönderilmez.";
+"privacy.point.apps" = "Hangi uygulamaları seçtiğini biz göremeyiz. Seçimi Apple'ın kendi seçicisi yapar ve bize yalnızca anlamsız birer kimlik (token) verilir.";
+"privacy.point.history" = "Namaz geçmişin cihazında kalır ve en fazla 120 gün saklanır.";
+"privacy.point.noMoney" = "Reklam, abonelik, uygulama içi satın alma, bağış ve takip aracı (tracker) yok.";
+"privacy.point.delete" = "Ayarlar'daki \"Tüm verileri sil\" her şeyi anında kaldırır.";
+"status.times.unavailable.title" = "Bu konumda vakit hesaplanamıyor";
+"status.times.unavailable.body" = "Bu enlemde yılın bu döneminde güneş batmıyor, bu yüzden vakitler astronomik olarak hesaplanamıyor. Ayarlar'dan daha güneydeki bir şehri seçebilirsin.";

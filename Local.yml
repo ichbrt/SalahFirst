@@ -1,0 +1,11 @@
+# Local signing settings. Committed empty on purpose.
+#
+# Put YOUR Apple Developer Team ID here, then tell git to stop tracking your
+# edit so it never lands in a pull request:
+#
+#     git update-index --skip-worktree Local.yml
+#
+# Find your Team ID at developer.apple.com/account under Membership details.
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""

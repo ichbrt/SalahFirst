@@ -1,0 +1,2 @@
+"CFBundleDisplayName" = "Salah First";
+"NSLocationWhenInUseUsageDescription" = "Namaz vakitlerini cihazında hesaplamak için konumun kullanılır. Konumun telefonundan çıkmaz, hiçbir sunucuya gönderilmez.";
