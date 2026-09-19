@@ -118,6 +118,8 @@ There is no backend. There is nothing to opt out of.
 `Support/App/PrivacyInfo.xcprivacy` declares no tracking, no collected data, and
 one required-reason API (`UserDefaults`, reasons `CA92.1` and `1C8F.1`).
 
+The full policy, in English and Turkish, is in [PRIVACY.md](PRIVACY.md).
+
 ---
 
 ## Development setup
